@@ -10,5 +10,12 @@
         @vite('resources/js/app.js')
     </head>
     <body>
+        <main>
+            <ul>
+                @foreach ($trains as $train)
+                    <li>{{ $train }}</li>
+                @endforeach
+            </ul>
+        </main>
     </body>
 </html>
