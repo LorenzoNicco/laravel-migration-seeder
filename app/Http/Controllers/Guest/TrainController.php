@@ -10,7 +10,7 @@ use App\Models\Train;
 class TrainController extends Controller
 {
     public function index() {
-        $trains = Train::where('data', '2023-03-13')->get();
+        $trains = Train::where('data', '>=', date('Y-m-d'))->get();
 
         return view('welcome', [
             'trains' => $trains
